@@ -43,15 +43,16 @@ public class StudentController {
 
     @CrossOrigin(origins = "*")
     @PostMapping(path="/search",consumes ="application/json",produces ="application/json" )
-    public String Searchstudents(){
-        return "Search successfull.";
+    public List<Students> Searchstudents(@RequestBody Students s){
+        String admno=s.getAdmno();
+        return (List<Students>) dao.SearchStudents(s.getAdmno());
     }
 
-    @CrossOrigin(origins = "*")
-    @PostMapping(path="/delete",consumes ="application/json",produces ="application/json" )
-    public String Deletestudents(){
-        return "Search successfull";
-    }
+//    @CrossOrigin(origins = "*")
+//    @PostMapping(path="/delete",consumes ="application/json",produces ="application/json" )
+//    public String Deletestudents(){
+//        return "Search successfull";
+//    }
 
 
 }
