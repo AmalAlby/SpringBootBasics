@@ -44,7 +44,7 @@ public class StudentController {
     @CrossOrigin(origins = "*")
     @PostMapping(path="/search",consumes ="application/json",produces ="application/json" )
     public String Searchstudents(){
-        return "Search successfull";
+        return "Search successfull.";
     }
 
     @CrossOrigin(origins = "*")
