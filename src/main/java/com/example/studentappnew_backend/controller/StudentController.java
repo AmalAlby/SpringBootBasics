@@ -23,6 +23,7 @@ public class StudentController {
         return "Welcome to my website";
     }
 
+    @CrossOrigin(origins = "*")
     @PostMapping(path="/add",consumes ="application/json",produces ="application/json" )
     public Map<String,String> AddStudent(@RequestBody Students s){
         System.out.println(s.getName().toString());
